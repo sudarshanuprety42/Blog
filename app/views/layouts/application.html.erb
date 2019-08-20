@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+
+    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <%= link_to 'Articles', articles_path,class:"navbar-brand" %>
+      <!-- {controller: "menus", action: "index"}, class: "btn btn-inverse" -->
+      <ul class="nav navbar-nav">
+        <li><%= link_to 'Home', articles_path,class:"nav-link" %></li>
+      </ul>
+
+      <ul class="nav navbar-nav ml-auto">
+        <li><%= link_to 'Create Article', new_article_path,class:"nav-link" %></li>
+      </ul>
+
+
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+
+  </body>
+</html>

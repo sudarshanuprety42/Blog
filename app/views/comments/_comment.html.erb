@@ -1,0 +1,12 @@
+
+<p>
+
+  <strong><%= comment.commenter %>: </strong>
+  <%= comment.body %>
+
+</p>
+<p style="font-size:12px;color:grey;margin-left:100px;margin-top:0px;">
+  <%= link_to 'Remove', [comment.article, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

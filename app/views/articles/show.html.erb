@@ -1,0 +1,13 @@
+<br><br><div class="jumbotron">
+  <h1 class="display-4"><%= @article.title %></h1>
+  <p class="lead"><%= @article.text %>
+    </p>
+</div>
+<hr class="my-4">
+<h2>Comments</h2>
+<%= render @article.comments %>
+<hr class="my-4">
+<%= render 'comments/form' %>
+
+<br>
+<%= link_to 'Back', articles_path %>
